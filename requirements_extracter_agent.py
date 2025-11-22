@@ -10,7 +10,7 @@ from chunks import DocumentChunk
 from google import genai
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 
@@ -239,4 +239,5 @@ class RAGRequirementExtractorAgent(ConversableAgent):
         intersection = words1.intersection(words2)
         union = words1.union(words2)
         
+
         return len(intersection) / len(union) if union else 0.0
