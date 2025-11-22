@@ -1,7 +1,7 @@
 from google import genai
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 def refine(filename: str):
@@ -46,6 +46,7 @@ if __name__ == "__main__":
     pdf_file = f"{filename}_refined_requirements_only_2.pdf"
 
     print(refine(pdf_file))
+
 
 
 
