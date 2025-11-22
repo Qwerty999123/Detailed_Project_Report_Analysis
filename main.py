@@ -22,7 +22,7 @@ from quality_reviewer_agent import QualityReviewerAgent
 from google import genai
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 
@@ -359,7 +359,7 @@ def example_usage():
 
 
 if __name__ == "__main__":
-    os.environ["GEMINI_API_KEY"] = "AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    os.environ["GEMINI_API_KEY"] = "gemini_api_key"
 
     # Set up environment variables
     if not os.getenv("GEMINI_API_KEY"):
@@ -367,4 +367,5 @@ if __name__ == "__main__":
         exit(1)
     
     # Run example
+
     example_usage()
