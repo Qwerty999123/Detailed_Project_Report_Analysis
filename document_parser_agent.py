@@ -9,7 +9,7 @@ from chunks import DocumentChunk
 from google import genai
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 class DocumentParserAgent(ConversableAgent):
@@ -186,4 +186,5 @@ class DocumentParserAgent(ConversableAgent):
             if sum(1 for keyword in keywords if keyword in text_lower) >= 2:
                 return domain
         
+
         return 'general'
