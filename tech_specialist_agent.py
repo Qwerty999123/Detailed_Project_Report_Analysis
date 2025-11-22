@@ -8,7 +8,7 @@ from vector_store import RAGVectorStore
 from google import genai
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 class TechnicalSpecialistAgent(ConversableAgent):
@@ -144,4 +144,5 @@ class TechnicalSpecialistAgent(ConversableAgent):
         enhanced_req['enhanced'] = True
         enhanced_req['enhancement_timestamp'] = datetime.now().isoformat()
         
+
         return enhanced_req
