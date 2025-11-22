@@ -8,7 +8,7 @@ from main import RAGDPRProcessor
 from vector_store import RAGVectorStore
 
 CLIENT = genai.Client(
-    api_key="AIzaSyDZlba6owD92R-PFb0CgkEpHUEdcehOTRg"
+    api_key="gemini_api_key"
 )
 
 def extract_requirements_from_md(md_path):
@@ -109,4 +109,5 @@ if __name__ == "__main__":
 
     print(result)
     
+
 
